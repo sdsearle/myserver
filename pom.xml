@@ -19,7 +19,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>Server</mainClass>
+                        <mainClass>com.sdsearle.server.Server</mainClass>
                     </manifest>
                 </archive>
             </configuration>
