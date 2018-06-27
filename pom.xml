@@ -10,6 +10,7 @@
       <name>Maven Quick Start Archetype</name>
       <url>http://maven.apache.org</url>
 
+      <plugin>
       <configuration>
       	<archive>
         	<manifest>
@@ -17,7 +18,9 @@
                         <mainClass>Server</mainClass>
                 </manifest>
         </archive>
-      </configuration>
+	</configuration>
+	</plugin>
+
 
       <dependencies>
         <dependency>
