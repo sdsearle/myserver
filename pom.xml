@@ -9,22 +9,7 @@
    <packaging>jar</packaging>
    <name>Maven Quick Start Archetype</name>
    <url>http://maven.apache.org</url>
-   <build>
-      <plugins>
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.0.2</version>
-            <configuration>
-               <archive>
-                  <manifest>
-                     <mainClass>com.sdsearle.server.Server</mainClass>
-                  </manifest>
-               </archive>
-            </configuration>
-         </plugin>
-      </plugins>
-   </build>
+   
    <dependencies>
       <dependency>
          <groupId>junit</groupId>
@@ -33,5 +18,42 @@
          <scope>test</scope>
       </dependency>
    </dependencies>
+   
+   <profiles>
+        <profile>
+            <id>fat-jar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <finalName>undertow-servlet</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-shade-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>shade</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <mainClass>org.openshift.quickstarts.undertow.servlet.ServletServer</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+		 </profile>
+	</profiles>
 </project>
 
