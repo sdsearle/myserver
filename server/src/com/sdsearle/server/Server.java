@@ -1,4 +1,5 @@
-package com.sdsearle.server
+package com.sdsearle.server;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,6 +38,7 @@ public class Server {
     }
 
     public static void main (String[] args) {
+    	System.out.println("Start");
         Server server = new Server();
     }
 
