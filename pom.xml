@@ -23,19 +23,24 @@
          <scope>test</scope>
       </dependency>
    </dependencies>
+   <repository>
+    <id>sdsearle.com</id>
+    <url>https://github.com/sdsearle/myserver</url>
+	</repository>
+	<dependency>
+    <groupId>com.github.sdsearle</groupId>
+    <artifactId>myserver</artifactId>
+    <version>LATEST</version>
+	</dependency>
    
    <profiles>
         <profile>
-            <id>fat-jar</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
-                <finalName>undertow-servlet</finalName>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
                             <archive>
                                 <manifest>
