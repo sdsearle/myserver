@@ -32,9 +32,9 @@
 			<build>
         <plugins>
             <plugin>
-                <groupId>com.sdsearle.server</groupId>
+                <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>LATEST</version>
+                <version>1.5.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -49,7 +49,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.sdsearle.server.Server</mainClass>
+                                    <mainClass>Server</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
