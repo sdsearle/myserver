@@ -22,12 +22,6 @@
          <version>4.8.2</version>
          <scope>test</scope>
       </dependency>
-	  <dependency>
-	  
-    <groupId>com.github.sdsearle</groupId>
-    <artifactId>myserver</artifactId>
-    <version>LATEST</version>
-	</dependency>
    </dependencies>
    
    <profiles>
@@ -35,6 +29,22 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+			<build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+</build>
             <build>
                 <plugins>
                     <plugin>
