@@ -22,6 +22,11 @@
          <version>4.8.2</version>
          <scope>test</scope>
       </dependency>
+	  <dependency>
+    <groupId>com.github.sdsearle</groupId>
+    <artifactId>myserver</artifactId>
+    <version>LATEST</version>
+	</dependency>
    </dependencies>
    <repositories> 
    <repository>
@@ -29,12 +34,6 @@
     <url>https://github.com/sdsearle/myserver</url>
    </repository>
    </repositories>
-   
-	<dependency>
-    <groupId>com.github.sdsearle</groupId>
-    <artifactId>myserver</artifactId>
-    <version>LATEST</version>
-	</dependency>
    
    <profiles>
         <profile>
@@ -44,6 +43,7 @@
             <build>
                 <plugins>
                     <plugin>
+					<artifactId>maven-jar-plugin</artifactId>
                         <configuration>
                             <archive>
                                 <manifest>
