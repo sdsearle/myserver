@@ -10,16 +10,22 @@
       <name>Maven Quick Start Archetype</name>
       <url>http://maven.apache.org</url>
 
-      <plugin>
-      <configuration>
-      	<archive>
-        	<manifest>
-                        <!-- <addClasspath>true</addClasspath> -->
+      <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.0.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
                         <mainClass>Server</mainClass>
-                </manifest>
-        </archive>
-	</configuration>
-	</plugin>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
 
       <dependencies>
