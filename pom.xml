@@ -23,10 +23,13 @@
          <scope>test</scope>
       </dependency>
    </dependencies>
+   <repositories> 
    <repository>
     <id>sdsearle.com</id>
     <url>https://github.com/sdsearle/myserver</url>
-	</repository>
+   </repository>
+   </repositories>
+   
 	<dependency>
     <groupId>com.github.sdsearle</groupId>
     <artifactId>myserver</artifactId>
