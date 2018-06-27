@@ -34,7 +34,7 @@
             <plugin>
                 <groupId>com.sdsearle.server</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.5.0</version>
+                <version>LATEST</version>
                 <executions>
                     <execution>
                         <goals>
